@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crochê com Graça</title>
+</head>
+<body>
+     <div class="wrapper">
+        <header> 
+            <div class="logo">
+                <img src="./images/logoCCGSEMINS.jpg" alt="Logo CCG">
+            </div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Clothes</li>
+                    <li>gallery</li>
+                    <li>Buy</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="container">
+            <h2>O que você deseja?</h2>
+
+            <div class="categorias">
+                <div class="item cropped" onclick="getRoupa(10)" >
+                    <img src="./images/cropped.jpg" alt="Modelo usando um cropped de crochê na cor branca.">
+                    <p>Cropped</p>
+                </div>
+
+                <div class="item vestido" onclick="getRoupa(20)">
+                    <img src="./images/vestido1.jpg" alt="Modelo usando um vestido de crochê com manga caida na cor amarelo">
+                    <p>Vestidos</p>
+                </div>
+
+                <div class="item short" onclick="getRoupa(30)">
+                    <img src="./images/short.jpg" alt="Modelo usando um short de crochê, tamanho medio e colorido">
+                    <p>Shorts</p>
+                </div>
+            </div>
+            <div class="container" >
+                <div class="containerTabela">
+                    <h2>Escolha o tamanho desejado!</h2>
+                    <div class="tamanhos">
+                        <!-- <div><input type="checkbox"> Cropped P R$ 65,90</div>  -->
+                        
+                    </div>
+                    <div class="cpf">
+                       CPF: <input name="cpf" type="number" id="cpf">
+                    </div>
+                    <div class="ContainerPreco">
+                        <h2>Preço Total: R$ <span id="preco"></span> </h2>
+                        <button onclick="inserirPagamento()" id="pagar">Pagar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <script src="script.js"></script>
+</body>
+</html>
