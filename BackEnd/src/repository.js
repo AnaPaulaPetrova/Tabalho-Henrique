@@ -25,10 +25,11 @@ class RoupasRepository {
     async setPagamento(infoPagamento) {
     try{
       const sql = `insert into vendas 
-                  (cpf, valorTotal, datacompra)
-                  values ($1, $2, $3`;
+                  (cpf, descricao, precototal, datacompra)
+                  values ($1, $2, $3, $4)`;
       const response = await this.database.query(sql, [
         infoPagamento.cpf,
+        infoPagamento.descricao,
         infoPagamento.valorTotal, 
         infoPagamento.datacompra
       ]);
@@ -37,6 +38,7 @@ class RoupasRepository {
       return{ error: error.message}
     }
      }
+    
     async todosPagamentos() {
       try {
         const sql = "select * from vendas";

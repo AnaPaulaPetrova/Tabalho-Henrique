@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./images/logoCCGSEMINS.ico">
     <title>Crochê com Graça</title>
 </head>
 <body>
@@ -19,6 +20,8 @@
                     <li>gallery</li>
                     <li>Buy</li>
                     <li>About</li>
+                    <li onclick="historic()">Historic</li>
+                    <li>🧸</li>
                 </ul>
             </nav>
         </header>
@@ -43,15 +46,17 @@
                 </div>
             </div>
             <div class="container" >
-                <div class="containerTabela">
+                <div class="containerTabela" style="display: none;" >
                     <h2>Escolha o tamanho desejado!</h2>
                     <div class="tamanhos">
                         <!-- <div><input type="checkbox"> Cropped P R$ 65,90</div>  -->
                         
                     </div>
                     <div class="cpf">
-                       CPF: <input name="cpf" type="number" id="cpf">
+                       <Span class="campo">CPF: </Span><input name="cpf" type="number" id="cpf" required>
+                       <span class="campo"> Descrição: </span> <input name="descricao" type="text" id="descricao" required>
                     </div>
+                    
                     <div class="ContainerPreco">
                         <h2>Preço Total: R$ <span id="preco"></span> </h2>
                         <button onclick="inserirPagamento()" id="pagar">Pagar</button>
@@ -59,7 +64,11 @@
                 </div>
             </div>
         </div>
+        <div class="footer">
+            &copy;crochêcomGraça || crochetando com amor para inalter ainda mais sua beleza || Direitos reservados aos alunos de ADS - IFCE-Jaguaruana 2025.
+        </div>
      </div>
      <script src="script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

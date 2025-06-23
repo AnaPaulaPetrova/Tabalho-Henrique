@@ -11,6 +11,6 @@ server.use(express.json());
 server.get("/roupas", Controller.getAllRoupas);
 server.get("/roupa/:id", Controller.getRoupaId);
 server.post("/pagamento", Controller.setPagamento);
-//server.get("/historico", Controller.todosPagamentos);
+server.get("/historico", Controller.todosPagamentos);
 
 server.listen(PORT, () => console.log("Server ON!"));

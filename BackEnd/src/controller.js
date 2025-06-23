@@ -30,6 +30,7 @@ async function setPagamento(request, reply) {
 
     reply.json(respostaBD);
 }
+
 async function todosPagamentos(request, reply){
   const responseDB = await repository.todosPagamentos();
 

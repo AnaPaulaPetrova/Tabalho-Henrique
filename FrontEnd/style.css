@@ -35,18 +35,19 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    font-size: 19px;
+    font-size: 20px;
 }
 nav ul {
     list-style: none;
     display: flex;
-
+   gap: 15px;
 }
 nav li {
     font-weight: bold;
     color: #d45aa8;
     cursor: pointer;
-    padding: 10px;
+    padding-right: 20px;
+    padding-left: 15px;
 }
 .container {
     text-align: center;
@@ -75,6 +76,7 @@ nav li {
 }
 .item:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 .item img {
     width: 100%;
@@ -88,15 +90,90 @@ nav li {
     color: #a6367b;
 }
 .containerTabela {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
     border-radius: 10px;
-    background-color: #ffffff;
 }
 .tamanhos {
-    width: 300px;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.tamanhos div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e57d7d;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 22px;
+  transition: background-color 0.3s;
+  border: 2px solid transparent;
+  color: #fff;
+  word-spacing: 10px;
+}
+.tamanhos input[type="checkbox"] {
+   width: 20px;
+   height: 20px;
+   border: 2px solid #d45aa8;
+   border-radius: 50%;
+   transition: all 0.4s ease;
+   background-color: #fbf4f6;
+   appearance: none;
+   outline: none;
+   cursor: pointer;
+}
+.tamanhos input[type="checkbox"]:checked {
+  font-weight: bold;
+  color: #fff;
+  background-color: #d45aa8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 3px rgba(241, 239, 240, 0.6);
+}
+
+.campo{
+    font-size: 28px;
+    font-weight: bold;
+    color: #d45aa8;   
+}
+#cpf, #descricao {
+    font-size: 22px;
+    color: #a6367b;
+    border-radius: 5px;
+    border-color: #a6367b;
+}
+#pagar {
+    width: 150px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff0f5;
+    padding: 5px;
+    font-family: 'Segoe UI', sans-serif; 
+    text-align: center;
+    background-color: #d45aa8 ;
+    border-style: none;
+    border-radius: 8px;
+}
+#pagar:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: #d45aa8 ;
+    background-color:  #f7dce5;
+    box-shadow: 0 0 10px 3px rgba(243, 56, 149, 0.6);
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff8fc;
+    color: #d45aa8;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
 }
